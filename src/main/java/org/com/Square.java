@@ -1,13 +1,16 @@
 package org.com;
 
- public class Square extends Figure {
+public class Square extends Figure {
+    private double a;
 
-    private int a = 1;
-    private int b = 2;
-
-      public void calculateArea() {
-            double square_area = a*b;
-            System.out.println("square area is: " + square_area);
-    }
+     public Square(String name, double x, double y, double a) {
+         super(name, x, y);
+         this.a = a;
+     }
+     @Override
+     public double calculateArea() {
+         double pow = Math.pow(a, 2);
+         return pow;
+     }
 }
 

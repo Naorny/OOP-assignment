@@ -1,13 +1,14 @@
 package org.com;
 
-
 public class Circle extends Figure {
-    private int radius = 2;
+    private double radius;
 
-    public void calculateArea() {
-        double circle_area = Math.PI * (radius * radius);
-        System.out.println("triangle area is: " + circle_area);
-
-
+    public Circle(String name, double x, double y, double radius) {
+        super(name, x, y);
+        this.radius = radius;
+    }
+    @Override
+    public double calculateArea() {
+        return Math.PI * (radius * radius);
     }
 }

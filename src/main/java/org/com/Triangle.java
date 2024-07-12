@@ -1,12 +1,16 @@
 package org.com;
 
-
 public class Triangle extends Figure {
-    private int n = 2;
-    private int h = 3;
+    private double n;
+    private double h;
 
-    public void calculateArea(){
-        double triangle_area = (double) n * h / 2;
-        System.out.println("triangle area is: " + triangle_area);
-
-}}
+    public Triangle(String name, double x, double y, double n, double h) {
+        super(name, x, y);
+        this.n = n;
+        this.h = h;
+    }
+    @Override
+   public double calculateArea(){
+        return n*h/2;
+    }
+}
